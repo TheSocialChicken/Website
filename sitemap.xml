@@ -3,74 +3,100 @@
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/services.html</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/pricing.html</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/contact.html</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/training.html</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/simulations.html</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/about.html</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/resources.html</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/booking.html</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/case-studies.html</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/blog/</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
     <loc>https://thesocialchicken.github.io/Website/resources/triple-layer-bmc.html</loc>
+    <lastmod>2026-04-02</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://thesocialchicken.github.io/Website/privacy-policy.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://thesocialchicken.github.io/Website/terms.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
   </url>
 
 </urlset>
