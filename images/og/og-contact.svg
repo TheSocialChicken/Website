@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0D0D0D"/>
+  <defs>
+    <pattern id="g" width="60" height="60" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="60" stroke="#D72638" stroke-width="0.5" opacity="0.1"/>
+      <line x1="0" y1="0" x2="60" y2="0" stroke="#D72638" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+    <radialGradient id="glow" cx="75%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#D72638" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#D72638" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(60,45) scale(1.333)">
+    <rect width="36" height="36" rx="8" fill="#D72638"/>
+    <path d="M9 18C9 13.029 13.029 9 18 9C22.971 9 27 13.029 27 18" stroke="#FFD60A" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M13 21C13 17.686 15.686 15 19 15C22.314 15 25 17.686 25 21" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <circle cx="18" cy="24.5" r="2.5" fill="white"/>
+  </g>
+  <text x="122" y="79" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#4B5563" letter-spacing="4">SOCIALCHICKEN</text>
+  <rect x="60" y="165" width="5" height="255" fill="#D72638" rx="2"/>
+  <text x="90" y="300" font-family="'Arial Black', Impact, Arial, sans-serif" font-size="74" font-weight="900" fill="white">LET'S TALK.</text>
+  <text x="90" y="385" font-family="'Arial Black', Impact, Arial, sans-serif" font-size="74" font-weight="900" fill="#D72638">REALLY.</text>
+  <text x="90" y="455" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#6B7280">Book a free 30-minute discovery call. No pitch, no commitment.</text>
+  <text x="1140" y="590" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#374151" text-anchor="end">socialchicken.net</text>
+</svg>
