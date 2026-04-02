@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0D0D0D">
+  <title>Pricing | SocialChicken</title>
+  <meta name="description" content="Transparent pricing for Agile Working Training, Innovation Consulting, and Simulations and Games. Starter, Growth, and Enterprise packages. EUR and USD pricing.">
+  <link rel="canonical" href="https://kamitor.github.io/Website/pricing.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pricing: SocialChicken">
+  <meta property="og:description" content="Transparent pricing for agile training, innovation consulting, and serious games. Three tiers per product.">
+  <meta property="og:url" content="https://kamitor.github.io/Website/pricing.html">
+  <meta property="og:site_name" content="SocialChicken">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kamitor.github.io/Website/"},{"@type":"ListItem","position":2,"name":"Pricing","item":"https://kamitor.github.io/Website/pricing.html"}]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="./styles/tokens.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/components.css">
+  <link rel="icon" type="image/svg+xml" href="./images/logo/favicon.svg">
+  <style>
+    .currency-toggle {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-full);
+      padding: var(--space-1);
+    }
+    .currency-toggle__btn {
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-full);
+      border: none;
+      background: transparent;
+      color: var(--color-grey-400);
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      cursor: pointer;
+      transition: var(--transition-base);
+    }
+    .currency-toggle__btn.active {
+      background: var(--color-red);
+      color: var(--color-white);
+    }
+    .price-amount { transition: opacity 0.2s ease; }
+    .pricing-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+    .pricing-card--featured {
+      border-color: var(--color-red);
+      position: relative;
+    }
+    .pricing-card__price {
+      font-family: var(--font-display);
+      font-size: clamp(var(--text-4xl), 6vw, var(--text-6xl));
+      color: var(--color-white);
+      line-height: 1;
+    }
+    .pricing-card__price-note {
+      font-size: var(--text-sm);
+      color: var(--color-grey-600);
+      margin-top: var(--space-1);
+    }
+    .pricing-card__features {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      list-style: none;
+      flex: 1;
+    }
+    .pricing-card__features li {
+      font-size: var(--text-sm);
+      color: var(--color-grey-400);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2);
+    }
+    .pricing-card__features li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--color-red);
+      border-radius: 50%;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="./index.html" class="nav-logo" aria-label="SocialChicken Home">
+      <svg class="nav-logo__icon" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#D72638"/><path d="M9 18C9 13.029 13.029 9 18 9C22.971 9 27 13.029 27 18" stroke="#FFD60A" stroke-width="2" stroke-linecap="round"/><path d="M13 21C13 17.686 15.686 15 19 15C22.314 15 25 17.686 25 21" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="24.5" r="2.5" fill="white"/></svg>
+      <span class="nav-logo__text">Social<span class="accent">Chicken</span></span>
+    </a>
+    <ul class="nav-menu" role="list">
+      <li><a href="./services.html" class="nav-menu__link">Services</a></li>
+      <li><a href="./pricing.html" class="nav-menu__link active">Pricing</a></li>
+      <li><a href="./resources.html" class="nav-menu__link">Resources</a></li>
+      <li><a href="./case-studies.html" class="nav-menu__link">Case Studies</a></li>
+      <li><a href="./about.html" class="nav-menu__link">About</a></li>
+      <li><a href="./blog/index.html" class="nav-menu__link">Insights</a></li>
+    </ul>
+    <div class="nav-actions"><div class="lang-switcher" aria-label="Language"><a href="./nl/index.html" class="lang-switcher__link" hreflang="nl">NL</a><a href="./de/index.html" class="lang-switcher__link" hreflang="de">DE</a><a href="./es/index.html" class="lang-switcher__link" hreflang="es">ES</a></div><a href="./contact.html" class="btn btn--primary btn--sm" data-booking-trigger="true">Book a Call</a></div>
+    <button id="nav-hamburger" class="nav-hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu"><span class="nav-hamburger__line"></span><span class="nav-hamburger__line"></span><span class="nav-hamburger__line"></span></button>
+  </div>
+</nav>
+
+<div id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+  <a href="./services.html" class="mobile-menu__link">Services</a>
+  <a href="./pricing.html" class="mobile-menu__link">Pricing</a>
+  <a href="./resources.html" class="mobile-menu__link">Resources</a>
+  <a href="./case-studies.html" class="mobile-menu__link">Case Studies</a>
+  <a href="./about.html" class="mobile-menu__link">About</a>
+  <a href="./blog/index.html" class="mobile-menu__link">Insights</a>
+  <div class="mobile-menu__lang"><a href="./nl/index.html" class="mobile-menu__lang-link" hreflang="nl">NL</a><a href="./de/index.html" class="mobile-menu__lang-link" hreflang="de">DE</a><a href="./es/index.html" class="mobile-menu__lang-link" hreflang="es">ES</a></div>
+  <div class="mobile-menu__cta"><a href="./contact.html" class="btn btn--primary" data-booking-trigger="true">Book a Call</a></div>
+</div>
+
+<main id="main" style="padding-top: var(--nav-height);">
+
+  <!-- HERO -->
+  <section class="section section--dark" aria-labelledby="pricing-heading" style="padding-block: var(--space-24) var(--space-12);">
+    <div class="container">
+      <nav aria-label="Breadcrumb" style="margin-bottom: var(--space-8);"><ol style="display:flex;gap:var(--space-2);list-style:none;font-size:var(--text-sm);color:var(--color-grey-600);"><li><a href="./index.html" class="link">Home</a></li><li aria-hidden="true" style="color:var(--color-grey-800);">/</li><li aria-current="page" style="color:var(--color-grey-400);">Pricing</li></ol></nav>
+      <p class="overline reveal">Transparent Pricing</p>
+      <h1 id="pricing-heading" class="reveal" style="margin-block: var(--space-4) var(--space-6);">
+        Honest prices.<br><span style="color: var(--color-red);">No surprises.</span>
+      </h1>
+      <p class="lead reveal" style="max-width:55ch; margin-bottom: var(--space-8);">
+        Three products, three tiers each. Everything is scoped in a free discovery call before any money changes hands.
+      </p>
+
+      <!-- Currency toggle -->
+      <div style="display:flex; align-items:center; gap: var(--space-4);" class="reveal">
+        <span style="font-size: var(--text-sm); color: var(--color-grey-600);">Currency:</span>
+        <div class="currency-toggle" role="group" aria-label="Select currency">
+          <button class="currency-toggle__btn active" data-currency="eur" aria-pressed="true">EUR</button>
+          <button class="currency-toggle__btn" data-currency="usd" aria-pressed="false">USD</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGILE WORKING TRAINING -->
+  <section class="section section--surface" aria-labelledby="agile-pricing-heading">
+    <div class="container">
+      <div style="margin-bottom: var(--space-10);" class="reveal">
+        <span class="badge badge--red" style="margin-bottom: var(--space-4);">Agile Working Training</span>
+        <h2 id="agile-pricing-heading" style="margin-bottom: var(--space-2);">Agile Working Training</h2>
+        <p style="color: var(--color-grey-400);">All prices are per engagement. Travel costs for in-person delivery are quoted separately.</p>
+      </div>
+      <div class="grid-3 stagger">
+
+        <div class="pricing-card reveal">
+          <div>
+            <p style="font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-grey-400); text-transform:uppercase; letter-spacing: var(--tracking-wider); margin-bottom: var(--space-2);">Starter</p>
+            <div class="pricing-card__price"><span class="price-amount" data-eur="1.200" data-usd="1.300">&#8364;1.200</span></div>
+            <p class="pricing-card__price-note">Agile Kickstart session, half day</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Half-day on-site or virtual session</li>
+            <li>2 to 3 agile games</li>
+            <li>Up to 15 participants</li>
+            <li>Facilitation and debrief included</li>
+            <li>Session summary report</li>
+          </ul>
+          <a href="./contact.html" class="btn btn--secondary">Get Started</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured reveal">
+          <div style="position:absolute; top:-1px; left:50%; transform:translateX(-50%); background: var(--color-red); color: white; font-size: var(--text-xs); font-weight: var(--weight-semibold); padding: var(--space-1) var(--space-4); border-radius: 0 0 var(--radius-md) var(--radius-md); white-space:nowrap; text-transform:uppercase; letter-spacing: var(--tracking-wider);">Most Popular</div>
+          <div>
+            <p style="font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-grey-400); text-transform:uppercase; letter-spacing: var(--tracking-wider); margin-bottom: var(--space-2);">Growth</p>
+            <div class="pricing-card__price"><span class="price-amount" data-eur="4.800" data-usd="5.200">&#8364;4.800</span></div>
+            <p class="pricing-card__price-note">Scrum Team Program, 4 weeks</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Everything in Starter</li>
+            <li>4-week Scrum adoption program</li>
+            <li>Up to 20 participants</li>
+            <li>Real sprint setup and coaching</li>
+            <li>Kanban board design and implementation</li>
+            <li>Weekly check-ins and retrospective facilitation</li>
+            <li>End-of-program assessment</li>
+          </ul>
+          <a href="./contact.html" class="btn btn--primary">Get Started</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div>
+            <p style="font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-grey-400); text-transform:uppercase; letter-spacing: var(--tracking-wider); margin-bottom: var(--space-2);">Enterprise</p>
+            <div class="pricing-card__price" style="color: var(--color-grey-600);">Custom</div>
+            <p class="pricing-card__price-note">Full adoption program, 8+ weeks</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Everything in Growth</li>
+            <li>8 to 12 week full transformation program</li>
+            <li>Multiple teams supported</li>
+            <li>Leadership coaching included</li>
+            <li>Custom agile game design</li>
+            <li>Ongoing support retainer available</li>
+          </ul>
+          <a href="./contact.html" class="btn btn--secondary">Get a Quote</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INNOVATION CONSULTING -->
+  <section class="section section--dark" aria-labelledby="innovation-pricing-heading">
+    <div class="container">
+      <div style="margin-bottom: var(--space-10);" class="reveal">
+        <span class="badge badge--yellow" style="margin-bottom: var(--space-4);">Innovation Consulting</span>
+        <h2 id="innovation-pricing-heading" style="margin-bottom: var(--space-2);">Innovation Consulting</h2>
+        <p style="color: var(--color-grey-400);">All prices are per engagement. Longer projects are quoted at a day rate after the discovery call.</p>
+      </div>
+      <div class="grid-3 stagger">
+
+        <div class="pricing-card reveal">
+          <div>
+            <p style="font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-grey-400); text-transform:uppercase; letter-spacing: var(--tracking-wider); margin-bottom: var(--space-2);">Starter</p>
+            <div class="pricing-card__price"><span class="price-amount" data-eur="1.800" data-usd="1.950">&#8364;1.800</span></div>
+            <p class="pricing-card__price-note">Problem Sprint, 1 day</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li>1-day facilitated problem sprint</li>
+            <li>Root cause analysis</li>
+            <li>Prioritised action plan</li>
+            <li>Up to 8 stakeholders</li>
+            <li>Session documentation included</li>
+          </ul>
+          <a href="./contact.html" class="btn btn--secondary">Get Started</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured reveal">
+          <div style="position:absolute; top:-1px; left:50%; transform:translateX(-50%); background: var(--color-red); color: white; font-size: var(--text-xs); font-weight: var(--weight-semibold); padding: var(--space-1) var(--space-4); border-radius: 0 0 var(--radius-md) var(--radius-md); white-space:nowrap; text-transform:uppercase; letter-spacing: var(--tracking-wider);">Most Popular</div>
+          <div>
+            <p style="font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-grey-400); text-transform:uppercase; letter-spacing: var(--tracking-wider); margin-bottom: var(--space-2);">Growth</p>
+            <div class="pricing-card__price"><span class="price-amount" data-eur="6.500" data-usd="7.000">&#8364;6.500</span></div>
+            <p class="pricing-card__price-note">Problem Sprint plus automation audit, 3 days</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Everything in Starter</li>
+            <li>3-day deep dive</li>
+            <li>Automation opportunity mapping</li>
+            <li>Innovation workshop with Triple Layer BMC</li>
+            <li>Implementation roadmap</li>
+            <li>2-week follow-up check-in</li>
+          </ul>
+          <a href="./contact.html" class="btn btn--primary">Get Started</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div>
+            <p style="font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-grey-400); text-transform:uppercase; letter-spacing: var(--tracking-wider); margin-bottom: var(--space-2);">Enterprise</p>
+            <div class="pricing-card__price" style="color: var(--color-grey-600);">Custom</div>
+            <p class="pricing-card__price-note">Multi-week consulting project</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Everything in Growth</li>
+            <li>4 to 12 week consulting engagement</li>
+            <li>Implementation support included</li>
+            <li>Stakeholder alignment sessions</li>
+            <li>Custom simulation to validate solutions</li>
+            <li>Monthly retainer available post-project</li>
+          </ul>
+          <a href="./contact.html" class="btn btn--secondary">Get a Quote</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULATIONS AND GAMES -->
+  <section class="section section--surface" aria-labelledby="sim-pricing-heading">
+    <div class="container">
+      <div style="margin-bottom: var(--space-10);" class="reveal">
+        <span class="badge badge--grey" style="margin-bottom: var(--space-4);">Simulations &amp; Games</span>
+        <h2 id="sim-pricing-heading" style="margin-bottom: var(--space-2);">Simulations &amp; Games</h2>
+        <p style="color: var(--color-grey-400);">All prices include facilitation. Custom game design is quoted after the discovery call.</p>
+      </div>
+      <div class="grid-3 stagger">
+
+        <div class="pricing-card reveal">
+          <div>
+            <p style="font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-grey-400); text-transform:uppercase; letter-spacing: var(--tracking-wider); margin-bottom: var(--space-2);">Starter</p>
+            <div class="pricing-card__price"><span class="price-amount" data-eur="950" data-usd="1.050">&#8364;950</span></div>
+            <p class="pricing-card__price-note">Single game session, half day</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Half-day facilitated game session</li>
+            <li>Classic serious game (e.g. Beer Game)</li>
+            <li>Up to 20 participants</li>
+            <li>Facilitated debrief and insights</li>
+            <li>In-person or virtual</li>
+          </ul>
+          <a href="./contact.html" class="btn btn--secondary">Get Started</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured reveal">
+          <div style="position:absolute; top:-1px; left:50%; transform:translateX(-50%); background: var(--color-red); color: white; font-size: var(--text-xs); font-weight: var(--weight-semibold); padding: var(--space-1) var(--space-4); border-radius: 0 0 var(--radius-md) var(--radius-md); white-space:nowrap; text-transform:uppercase; letter-spacing: var(--tracking-wider);">Most Popular</div>
+          <div>
+            <p style="font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-grey-400); text-transform:uppercase; letter-spacing: var(--tracking-wider); margin-bottom: var(--space-2);">Growth</p>
+            <div class="pricing-card__price"><span class="price-amount" data-eur="3.200" data-usd="3.500">&#8364;3.200</span></div>
+            <p class="pricing-card__price-note">Digital simulation, full day</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Everything in Starter</li>
+            <li>Full-day digital simulation (e.g. Value Chain Hackers)</li>
+            <li>Up to 30 participants</li>
+            <li>Multiple scenario rounds</li>
+            <li>Learning analytics and debrief report</li>
+            <li>Follow-up session available</li>
+          </ul>
+          <a href="./contact.html" class="btn btn--primary">Get Started</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div>
+            <p style="font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-grey-400); text-transform:uppercase; letter-spacing: var(--tracking-wider); margin-bottom: var(--space-2);">Enterprise</p>
+            <div class="pricing-card__price" style="color: var(--color-grey-600);">Custom</div>
+            <p class="pricing-card__price-note">Custom game design and delivery</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Everything in Growth</li>
+            <li>Custom serious game designed for your context</li>
+            <li>Unlimited participants (multiple runs)</li>
+            <li>Game mechanics engineered around your system</li>
+            <li>Facilitator training for internal delivery</li>
+            <li>Ongoing license and support available</li>
+          </ul>
+          <a href="./contact.html" class="btn btn--secondary">Get a Quote</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--dark" aria-labelledby="pricing-faq-heading">
+    <div class="container" style="max-width: 700px;">
+      <div class="section-header reveal">
+        <p class="overline">Questions About Pricing</p>
+        <h2 id="pricing-faq-heading" style="margin-block: var(--space-4);">Good to know</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap: var(--space-4);">
+
+        <details class="card reveal" style="cursor:pointer;">
+          <summary style="font-weight: var(--weight-semibold); color: var(--color-white); font-size: var(--text-lg); list-style:none; display:flex; justify-content:space-between; align-items:center; gap: var(--space-4);">
+            Is there a minimum commitment?
+            <span aria-hidden="true" style="color: var(--color-red); font-size: var(--text-2xl); line-height:1; flex-shrink:0;">+</span>
+          </summary>
+          <p style="margin-top: var(--space-4); color: var(--color-grey-400);">No minimum commitment. Every engagement starts with a free discovery call. If we are a good fit, we scope the work together before anything is signed.</p>
+        </details>
+
+        <details class="card reveal" style="cursor:pointer;">
+          <summary style="font-weight: var(--weight-semibold); color: var(--color-white); font-size: var(--text-lg); list-style:none; display:flex; justify-content:space-between; align-items:center; gap: var(--space-4);">
+            Can I combine products?
+            <span aria-hidden="true" style="color: var(--color-red); font-size: var(--text-2xl); line-height:1; flex-shrink:0;">+</span>
+          </summary>
+          <p style="margin-top: var(--space-4); color: var(--color-grey-400);">Yes. Combined engagements are common and often make sense. For example, a Game session followed by an Agile adoption program. We will build a combined package that fits your goals and budget.</p>
+        </details>
+
+        <details class="card reveal" style="cursor:pointer;">
+          <summary style="font-weight: var(--weight-semibold); color: var(--color-white); font-size: var(--text-lg); list-style:none; display:flex; justify-content:space-between; align-items:center; gap: var(--space-4);">
+            Do you offer educational institution discounts?
+            <span aria-hidden="true" style="color: var(--color-red); font-size: var(--text-2xl); line-height:1; flex-shrink:0;">+</span>
+          </summary>
+          <p style="margin-top: var(--space-4); color: var(--color-grey-400);">Yes. Universities, colleges, and non-profit educational organisations are eligible for discounted rates. Mention this in your discovery call and we will adjust the proposal accordingly.</p>
+        </details>
+
+        <details class="card reveal" style="cursor:pointer;">
+          <summary style="font-weight: var(--weight-semibold); color: var(--color-white); font-size: var(--text-lg); list-style:none; display:flex; justify-content:space-between; align-items:center; gap: var(--space-4);">
+            Are travel costs included?
+            <span aria-hidden="true" style="color: var(--color-red); font-size: var(--text-2xl); line-height:1; flex-shrink:0;">+</span>
+          </summary>
+          <p style="margin-top: var(--space-4); color: var(--color-grey-400);">Travel costs for in-person delivery outside the Netherlands are quoted separately and transparently before any commitment. Virtual delivery has no additional costs.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--surface" aria-labelledby="pricing-cta-heading">
+    <div class="container" style="text-align:center;">
+      <h2 id="pricing-cta-heading" class="reveal" style="margin-bottom: var(--space-4);">Still not sure which <span style="color: var(--color-red);">tier fits?</span></h2>
+      <p class="lead reveal" style="margin-inline:auto; margin-bottom: var(--space-8);">Book a free 30-minute discovery call. We will help you figure out exactly what you need before you spend anything.</p>
+      <a href="./contact.html" class="btn btn--primary btn--lg reveal" data-booking-trigger="true">Book a Free Discovery Call</a>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="./index.html" class="footer-brand__logo" aria-label="SocialChicken Home"><svg width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#D72638"/><path d="M9 18C9 13.029 13.029 9 18 9C22.971 9 27 13.029 27 18" stroke="#FFD60A" stroke-width="2" stroke-linecap="round"/><path d="M13 21C13 17.686 15.686 15 19 15C22.314 15 25 17.686 25 21" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="24.5" r="2.5" fill="white"/></svg><span class="footer-brand__logo-text">Social<span class="accent">Chicken</span></span></a>
+        <p class="footer-brand__tagline">Agile training, innovation consulting, and serious games by Christiaan Verhoef.</p>
+      </div>
+      <div><h3 class="footer-col__heading">Services</h3><ul class="footer-col__links"><li><a href="./training.html">Agile Working Training</a></li><li><a href="./services.html#innovation">Innovation Consulting</a></li><li><a href="./simulations.html">Simulations &amp; Games</a></li><li><a href="./pricing.html">Pricing</a></li></ul></div>
+      <div><h3 class="footer-col__heading">Resources</h3><ul class="footer-col__links"><li><a href="./resources.html">Templates &amp; Tools</a></li><li><a href="./case-studies.html">Case Studies</a></li><li><a href="./blog/index.html">Insights</a></li><li><a href="./about.html">About Christiaan</a></li></ul></div>
+      <div><h3 class="footer-col__heading">Get in Touch</h3><ul class="footer-col__links"><li><a href="./contact.html" data-booking-trigger="true">Book a Discovery Call</a></li><li><a href="mailto:chris@socialchicken.net">chris@socialchicken.net</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p class="footer-copyright">&copy; <span id="copyright-year">2026</span> SocialChicken. All rights reserved.</p><nav class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></nav></div>
+  </div>
+</footer>
+
+<div id="chatbot-widget-container" data-integration="chatbot"></div>
+<script src="./js/nav.js" defer></script>
+<script src="./js/scroll-animations.js" defer></script>
+<script defer>
+  (function() {
+    var eur = { symbol: '\u20AC', format: function(n) { return '\u20AC' + n.toLocaleString('nl-NL'); } };
+    var usd = { symbol: '$', format: function(n) { return '$' + n.toLocaleString('en-US'); } };
+    var current = 'eur';
+
+    function updatePrices(currency) {
+      var amounts = document.querySelectorAll('.price-amount');
+      amounts.forEach(function(el) {
+        var val = parseFloat(el.getAttribute('data-' + currency).replace('.', '').replace(',', '.'));
+        if (isNaN(val)) return;
+        el.textContent = currency === 'eur'
+          ? '\u20AC' + el.getAttribute('data-eur')
+          : '$' + el.getAttribute('data-usd');
+      });
+    }
+
+    document.querySelectorAll('.currency-toggle__btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var currency = this.getAttribute('data-currency');
+        if (currency === current) return;
+        current = currency;
+        document.querySelectorAll('.currency-toggle__btn').forEach(function(b) {
+          b.classList.toggle('active', b.getAttribute('data-currency') === currency);
+          b.setAttribute('aria-pressed', b.getAttribute('data-currency') === currency);
+        });
+        updatePrices(currency);
+      });
+    });
+  })();
+</script>
+</body>
+</html>

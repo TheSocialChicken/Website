@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404: Page Not Found | SocialChicken</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="./styles/tokens.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="icon" type="image/svg+xml" href="./images/logo/favicon.svg">
+</head>
+<body style="min-height:100vh; display:flex; flex-direction:column;">
+<nav id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="./index.html" class="nav-logo"><svg class="nav-logo__icon" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#D72638"/><path d="M9 18C9 13.029 13.029 9 18 9C22.971 9 27 13.029 27 18" stroke="#FFD60A" stroke-width="2" stroke-linecap="round"/><path d="M13 21C13 17.686 15.686 15 19 15C22.314 15 25 17.686 25 21" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="24.5" r="2.5" fill="white"/></svg><span class="nav-logo__text">Social<span class="accent">Chicken</span></span></a>
+    <div class="nav-actions"><a href="./index.html" class="btn btn--primary btn--sm">Back to Home</a></div>
+  </div>
+</nav>
+
+<main id="main" style="flex:1; display:flex; align-items:center; justify-content:center; padding-top: var(--nav-height);">
+  <div class="container" style="text-align:center; padding-block: var(--space-24);">
+    <div style="font-family: var(--font-display); font-size: clamp(6rem,20vw,12rem); color: var(--color-red); line-height:1; letter-spacing: var(--tracking-wide); opacity:0.3;" aria-hidden="true">404</div>
+    <h1 style="font-family: var(--font-display); font-size: clamp(var(--text-4xl),6vw,var(--text-7xl)); margin-block: var(--space-4) var(--space-6);">
+      This page<br>doesn't exist.
+    </h1>
+    <p class="lead" style="margin-inline:auto; margin-bottom: var(--space-10);">
+      You've navigated somewhere we haven't simulated yet. Let's get you back on track.
+    </p>
+    <div style="display:flex; gap: var(--space-4); justify-content:center; flex-wrap:wrap;">
+      <a href="./index.html" class="btn btn--primary btn--lg">Back to Home</a>
+      <a href="./services.html" class="btn btn--secondary btn--lg">View Services</a>
+    </div>
+  </div>
+</main>
+
+<script src="./js/nav.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0D0D0D">
+  <title>Book a Discovery Call | SocialChicken</title>
+  <meta name="description" content="Book a free 30-minute discovery call with Christiaan Verhoef at SocialChicken. No pitch, no commitment. Just a real conversation about your challenge.">
+  <link rel="canonical" href="https://kamitor.github.io/Website/booking.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Book a Discovery Call: SocialChicken">
+  <meta property="og:description" content="Book a free 30-minute discovery call with Christiaan Verhoef. No pitch, no commitment. Just a real conversation about your challenge.">
+  <meta property="og:url" content="https://kamitor.github.io/Website/booking.html">
+  <meta property="og:site_name" content="SocialChicken">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kamitor.github.io/Website/"},{"@type":"ListItem","position":2,"name":"Book a Call","item":"https://kamitor.github.io/Website/booking.html"}]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="./styles/tokens.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/components.css">
+  <link rel="icon" type="image/svg+xml" href="./images/logo/favicon.svg">
+</head>
+<body>
+
+<nav id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="./index.html" class="nav-logo" aria-label="SocialChicken Home">
+      <svg class="nav-logo__icon" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#D72638"/><path d="M9 18C9 13.029 13.029 9 18 9C22.971 9 27 13.029 27 18" stroke="#FFD60A" stroke-width="2" stroke-linecap="round"/><path d="M13 21C13 17.686 15.686 15 19 15C22.314 15 25 17.686 25 21" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="24.5" r="2.5" fill="white"/></svg>
+      <span class="nav-logo__text">Social<span class="accent">Chicken</span></span>
+    </a>
+    <ul class="nav-menu" role="list">
+      <li><a href="./services.html" class="nav-menu__link">Services</a></li>
+      <li><a href="./pricing.html" class="nav-menu__link">Pricing</a></li>
+      <li><a href="./resources.html" class="nav-menu__link">Resources</a></li>
+      <li><a href="./case-studies.html" class="nav-menu__link">Case Studies</a></li>
+      <li><a href="./about.html" class="nav-menu__link">About</a></li>
+      <li><a href="./blog/index.html" class="nav-menu__link">Insights</a></li>
+    </ul>
+    <div class="nav-actions"><div class="lang-switcher" aria-label="Language"><a href="./nl/index.html" class="lang-switcher__link" hreflang="nl">NL</a><a href="./de/index.html" class="lang-switcher__link" hreflang="de">DE</a><a href="./es/index.html" class="lang-switcher__link" hreflang="es">ES</a></div><a href="./contact.html" class="btn btn--primary btn--sm active">Book a Call</a></div>
+    <button id="nav-hamburger" class="nav-hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu"><span class="nav-hamburger__line"></span><span class="nav-hamburger__line"></span><span class="nav-hamburger__line"></span></button>
+  </div>
+</nav>
+
+<div id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+  <a href="./services.html" class="mobile-menu__link">Services</a>
+  <a href="./pricing.html" class="mobile-menu__link">Pricing</a>
+  <a href="./resources.html" class="mobile-menu__link">Resources</a>
+  <a href="./case-studies.html" class="mobile-menu__link">Case Studies</a>
+  <a href="./about.html" class="mobile-menu__link">About</a>
+  <a href="./blog/index.html" class="mobile-menu__link">Insights</a>
+  <div class="mobile-menu__lang"><a href="./nl/index.html" class="mobile-menu__lang-link" hreflang="nl">NL</a><a href="./de/index.html" class="mobile-menu__lang-link" hreflang="de">DE</a><a href="./es/index.html" class="mobile-menu__lang-link" hreflang="es">ES</a></div>
+  <div class="mobile-menu__cta"><a href="./contact.html" class="btn btn--primary">Book a Call</a></div>
+</div>
+
+<main id="main" style="padding-top: var(--nav-height);">
+
+  <section class="section section--dark" aria-labelledby="booking-heading" style="min-height: 80vh; display:flex; align-items:center;">
+    <div class="container" style="text-align:center; max-width:700px; margin-inline:auto;">
+      <p class="overline reveal">Free Discovery Call</p>
+      <h1 id="booking-heading" class="reveal" style="margin-block: var(--space-4) var(--space-6);">
+        30 minutes.<br><span style="color: var(--color-red);">No pitch.</span><br>Real conversation.
+      </h1>
+      <p class="lead reveal" style="margin-bottom: var(--space-10);">
+        Tell me what you are working on. I will listen, ask questions, and give you an honest take on whether a game, a training program, or a consulting sprint would actually help. No commitment needed.
+      </p>
+
+      <!-- Calendar embed placeholder -->
+      <div id="calendar-embed-container" data-integration="calendar" class="reveal" style="min-height:300px; margin-bottom: var(--space-8);">
+        <div class="integration-placeholder" style="flex-direction:column; gap: var(--space-6); padding: var(--space-12);">
+          <svg width="48" height="48" viewBox="0 0 40 40" fill="none" aria-hidden="true" style="color: var(--color-grey-600);">
+            <rect x="5" y="9" width="30" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+            <path d="M5 17h30M14 5v8M26 5v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <rect x="12" y="22" width="5" height="5" rx="1" fill="currentColor" opacity="0.5"/>
+            <rect x="22" y="22" width="5" height="5" rx="1" fill="currentColor" opacity="0.5"/>
+          </svg>
+          <div>
+            <p style="color: var(--color-grey-300); font-size: var(--text-lg); margin-bottom: var(--space-2);">Calendar booking coming soon.</p>
+            <p style="color: var(--color-grey-600); margin-bottom: var(--space-6);">In the meantime, send me an email and we will find a time.</p>
+            <a href="mailto:chris@socialchicken.net?subject=Discovery Call Request" class="btn btn--primary btn--lg">
+              Email chris@socialchicken.net
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p style="color: var(--color-grey-600); font-size: var(--text-sm);">Or send a message via the <a href="./contact.html" class="link">contact form</a> and I will get back to you within 1 business day.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="./index.html" class="footer-brand__logo" aria-label="SocialChicken Home"><svg width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#D72638"/><path d="M9 18C9 13.029 13.029 9 18 9C22.971 9 27 13.029 27 18" stroke="#FFD60A" stroke-width="2" stroke-linecap="round"/><path d="M13 21C13 17.686 15.686 15 19 15C22.314 15 25 17.686 25 21" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="24.5" r="2.5" fill="white"/></svg><span class="footer-brand__logo-text">Social<span class="accent">Chicken</span></span></a>
+        <p class="footer-brand__tagline">Agile training, innovation consulting, and serious games by Christiaan Verhoef.</p>
+      </div>
+      <div><h3 class="footer-col__heading">Services</h3><ul class="footer-col__links"><li><a href="./training.html">Agile Working Training</a></li><li><a href="./services.html#innovation">Innovation Consulting</a></li><li><a href="./simulations.html">Simulations &amp; Games</a></li><li><a href="./pricing.html">Pricing</a></li></ul></div>
+      <div><h3 class="footer-col__heading">Resources</h3><ul class="footer-col__links"><li><a href="./resources.html">Templates &amp; Tools</a></li><li><a href="./case-studies.html">Case Studies</a></li><li><a href="./blog/index.html">Insights</a></li><li><a href="./about.html">About Christiaan</a></li></ul></div>
+      <div><h3 class="footer-col__heading">Get in Touch</h3><ul class="footer-col__links"><li><a href="./contact.html" data-booking-trigger="true">Book a Discovery Call</a></li><li><a href="mailto:chris@socialchicken.net">chris@socialchicken.net</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p class="footer-copyright">&copy; <span id="copyright-year">2026</span> SocialChicken. All rights reserved.</p><nav class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></nav></div>
+  </div>
+</footer>
+
+<script src="./js/nav.js" defer></script>
+<script src="./js/scroll-animations.js" defer></script>
+<script src="./js/calendar-placeholder.js" defer></script>
+</body>
+</html>

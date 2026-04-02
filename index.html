@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0D0D0D">
+
+  <!-- SEO -->
+  <title>SocialChicken | Simulate Before You Commit</title>
+  <meta name="description" content="SocialChicken helps organisations adopt agile, solve complex problems, and build capability through serious games and simulation. Founded by Christiaan Verhoef.">
+  <meta name="keywords" content="agile training, innovation consulting, serious games, simulation, scrum, kanban, game theory, blended learning, SocialChicken, Christiaan Verhoef">
+  <link rel="canonical" href="https://kamitor.github.io/Website/">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Christiaan Verhoef, SocialChicken">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SocialChicken: Simulate Before You Commit">
+  <meta property="og:description" content="Agile training, innovation consulting, and serious games for organisations that want to learn by doing. Founded by Christiaan Verhoef.">
+  <meta property="og:image" content="https://kamitor.github.io/Website/images/og/og-home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://kamitor.github.io/Website/">
+  <meta property="og:site_name" content="SocialChicken">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SocialChicken: Simulate Before You Commit">
+  <meta name="twitter:description" content="Agile training, innovation consulting, and serious games for organisations that want to learn by doing.">
+  <meta name="twitter:image" content="https://kamitor.github.io/Website/images/og/og-home.jpg">
+
+  <!-- Schema.org: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "SocialChicken",
+    "url": "https://kamitor.github.io/Website/",
+    "logo": "https://kamitor.github.io/Website/images/logo/logo.svg",
+    "description": "SocialChicken helps organisations adopt agile ways of working, solve complex problems through innovation consulting, and build capability through serious games and simulation-based learning.",
+    "slogan": "Simulate before you commit.",
+    "founder": {
+      "@type": "Person",
+      "name": "Christiaan Verhoef"
+    },
+    "knowsAbout": [
+      "Agile Working",
+      "Scrum",
+      "Kanban",
+      "Innovation Consulting",
+      "Serious Games",
+      "Simulation-Based Learning",
+      "Game Theory",
+      "Conscious Competence",
+      "Blended Learning"
+    ],
+    "areaServed": "Worldwide",
+    "serviceType": [
+      "Agile Working Training",
+      "Innovation Consulting",
+      "Simulations and Games"
+    ],
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Schema.org: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SocialChicken",
+    "url": "https://kamitor.github.io/Website/",
+    "description": "Agile training, innovation consulting, and serious games by Christiaan Verhoef."
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/tokens.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/splash.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/components.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./images/logo/favicon.svg">
+</head>
+<body>
+
+<!-- ============================================================
+     SPLASH SCREEN
+     ============================================================ -->
+<div id="splash-screen" role="presentation" aria-hidden="true">
+  <canvas id="splash-canvas" aria-hidden="true"></canvas>
+
+  <div id="splash-content">
+    <div id="splash-logo-mark" style="opacity:0; transform:scale(0.85)">
+      <!-- Logo Icon -->
+      <svg id="splash-logo-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="56" height="56" rx="12" fill="#D72638"/>
+        <path d="M14 28C14 20.268 20.268 14 28 14C35.732 14 42 20.268 42 28" stroke="#FFD60A" stroke-width="3" stroke-linecap="round"/>
+        <path d="M20 32C20 27.582 23.582 24 28 24C32.418 24 36 27.582 36 32" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="28" cy="38" r="4" fill="white"/>
+        <circle cx="20" cy="24" r="2" fill="#FFD60A"/>
+        <circle cx="36" cy="24" r="2" fill="#FFD60A"/>
+      </svg>
+
+      <div>
+        <div id="splash-wordmark">Social<span class="accent">Chicken</span></div>
+      </div>
+    </div>
+
+    <div id="splash-tagline">
+      <span class="word">Simulate</span>
+      <span class="word">&nbsp;before</span>
+      <span class="word">&nbsp;you</span>
+      <span class="word">&nbsp;commit.</span>
+    </div>
+  </div>
+
+  <div id="splash-progress"></div>
+  <button id="skip-intro" aria-label="Skip intro animation">Skip</button>
+</div>
+
+
+<!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+<div id="main-content" aria-live="polite">
+
+  <!-- ---- NAVIGATION ---- -->
+  <nav id="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+
+      <a href="./index.html" class="nav-logo" aria-label="SocialChicken Home">
+        <svg class="nav-logo__icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="#D72638"/>
+          <path d="M9 18C9 13.029 13.029 9 18 9C22.971 9 27 13.029 27 18" stroke="#FFD60A" stroke-width="2" stroke-linecap="round"/>
+          <path d="M13 21C13 17.686 15.686 15 19 15C22.314 15 25 17.686 25 21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="18" cy="24.5" r="2.5" fill="white"/>
+        </svg>
+        <span class="nav-logo__text">Social<span class="accent">Chicken</span></span>
+      </a>
+
+      <ul class="nav-menu" role="list">
+        <li class="nav-menu__item">
+          <a href="./services.html" class="nav-menu__link">Services</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="./pricing.html" class="nav-menu__link">Pricing</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="./resources.html" class="nav-menu__link">Resources</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="./case-studies.html" class="nav-menu__link">Case Studies</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="./about.html" class="nav-menu__link">About</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="./blog/index.html" class="nav-menu__link">Insights</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions"><div class="lang-switcher" aria-label="Language"><a href="./nl/index.html" class="lang-switcher__link" hreflang="nl">NL</a><a href="./de/index.html" class="lang-switcher__link" hreflang="de">DE</a><a href="./es/index.html" class="lang-switcher__link" hreflang="es">ES</a></div><a href="./contact.html" class="btn btn--primary btn--sm" data-booking-trigger="true">Book a Call</a></div>
+
+      <button
+        id="nav-hamburger"
+        class="nav-hamburger"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Open navigation menu"
+      >
+        <span class="nav-hamburger__line"></span>
+        <span class="nav-hamburger__line"></span>
+        <span class="nav-hamburger__line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <a href="./services.html" class="mobile-menu__link">Services</a>
+    <a href="./pricing.html" class="mobile-menu__link">Pricing</a>
+    <a href="./resources.html" class="mobile-menu__link">Resources</a>
+    <a href="./case-studies.html" class="mobile-menu__link">Case Studies</a>
+    <a href="./about.html" class="mobile-menu__link">About</a>
+    <a href="./blog/index.html" class="mobile-menu__link">Insights</a>
+    <div class="mobile-menu__lang"><a href="./nl/index.html" class="mobile-menu__lang-link" hreflang="nl">NL</a><a href="./de/index.html" class="mobile-menu__lang-link" hreflang="de">DE</a><a href="./es/index.html" class="mobile-menu__lang-link" hreflang="es">ES</a></div>
+    <div class="mobile-menu__cta">
+      <a href="./contact.html" class="btn btn--primary" data-booking-trigger="true">Book a Call</a>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <main id="main">
+    <section class="hero section--dark" aria-labelledby="hero-heading" style="
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: var(--nav-height);
+    ">
+      <!-- Background grid pattern -->
+      <div aria-hidden="true" style="
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(215,38,56,0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(215,38,56,0.04) 1px, transparent 1px);
+        background-size: 60px 60px;
+        pointer-events: none;
+      "></div>
+
+      <!-- Gradient vignette -->
+      <div aria-hidden="true" style="
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at 60% 50%, rgba(215,38,56,0.08) 0%, transparent 60%);
+        pointer-events: none;
+      "></div>
+
+      <div class="container" style="position: relative; z-index: 1;">
+        <div style="max-width: 900px;">
+
+          <div class="overline reveal" style="margin-bottom: var(--space-6);">
+            Agile Training, Innovation Consulting &amp; Serious Games
+          </div>
+
+          <h1 id="hero-heading" class="reveal" style="
+            font-family: var(--font-display);
+            font-size: clamp(3.5rem, 10vw, 9rem);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            line-height: 0.95;
+            color: var(--color-white);
+            margin-bottom: var(--space-6);
+          ">
+            Simulate<br>
+            <span style="color: var(--color-red);">Before</span><br>
+            You Commit.
+          </h1>
+
+          <p class="lead reveal" style="
+            max-width: 52ch;
+            margin-bottom: var(--space-10);
+            color: var(--color-grey-400);
+          ">
+            Every great idea deserves a practice run. We help organisations learn through doing,
+            decide through simulating, and grow through the power of play.
+          </p>
+
+          <div class="reveal" style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+            <a href="./contact.html" class="btn btn--primary btn--lg" data-booking-trigger="true">
+              Book a Discovery Call
+            </a>
+            <a href="./services.html" class="btn btn--secondary btn--lg">
+              Explore What We Do
+            </a>
+          </div>
+
+          <!-- Scroll cue -->
+          <div aria-hidden="true" style="
+            margin-top: var(--space-20);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            color: var(--color-grey-600);
+            font-size: var(--text-xs);
+            letter-spacing: var(--tracking-widest);
+            text-transform: uppercase;
+          " class="reveal">
+            <div style="
+              width: 1px;
+              height: 48px;
+              background: linear-gradient(to bottom, transparent, var(--color-red));
+            "></div>
+            Scroll to explore
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         PHILOSOPHY / PROBLEM STATEMENT
+         ============================================================ -->
+    <section class="section section--surface" aria-labelledby="philosophy-heading">
+      <div class="container">
+        <div style="max-width: 800px; margin-inline: auto; text-align: center;">
+          <p class="overline reveal">The SocialChicken Philosophy</p>
+          <h2 id="philosophy-heading" class="reveal" style="margin-block: var(--space-4) var(--space-6);">
+            We all lay eggs.<br>
+            <span style="color: var(--color-red);">Let's hatch them together.</span>
+          </h2>
+          <p class="lead reveal">
+            Everyone has ideas. Big ones. But in most organisations, the farmer comes in and takes the egg,
+            leaves some grain, and the cycle repeats. The idea becomes someone else's output.
+          </p>
+          <p class="lead reveal" style="margin-top: var(--space-4);">
+            SocialChicken flips that. We are the chickens. We breed each other's ideas, test them in
+            safe simulations, and turn them into real change. No more committing to something you
+            haven't practiced first.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SERVICES OVERVIEW
+         ============================================================ -->
+    <section class="section section--dark" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <p class="overline">What We Do</p>
+          <h2 id="services-heading" style="margin-block: var(--space-4) var(--space-4);">Three products.<br><span style="color: var(--color-red);">One philosophy.</span></h2>
+          <p class="lead">Whether you want to work more agile, solve a stubborn problem, or learn through a game, we have a product built for that.</p>
+        </div>
+
+        <div class="grid-3 stagger">
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="3" y="3" width="9" height="9" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="16" y="3" width="9" height="9" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="3" y="16" width="9" height="9" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="16" y="16" width="9" height="9" rx="2" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="service-card__label">01 / Agile Working Training</span>
+            <h3 class="service-card__title">Learn Agile by Playing It First</h3>
+            <p class="service-card__desc">We start with agile games that create genuine buy-in, then guide your team into real Scrum and Kanban adoption. Theory comes after experience, not before.</p>
+            <a href="./training.html" class="service-card__link">
+              Learn more
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card service-card--yellow reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M10 14l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="service-card__label">02 / Innovation Consulting</span>
+            <h3 class="service-card__title">Solve Problems That Keep Coming Back</h3>
+            <p class="service-card__desc">We help organisations identify root causes, design solutions, and add smart automation where it actually helps. No buzzwords, no generic frameworks.</p>
+            <a href="./services.html#innovation" class="service-card__link">
+              Learn more
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M14 4L3 9l11 5 11-5-11-5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M3 9v8M25 9v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 14.5v4a8 4 0 0 0 12 0v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="service-card__label">03 / Simulations &amp; Games</span>
+            <h3 class="service-card__title">Play Your Way to Better Decisions</h3>
+            <p class="service-card__desc">From the Beer Game to custom digital simulations, we design serious games that reveal how your system really works. Built on game theory and blended learning principles.</p>
+            <a href="./simulations.html" class="service-card__link">
+              Learn more
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SOCIAL PROOF BAR
+         ============================================================ -->
+    <section class="section--surface" aria-label="Communities we work with" style="padding-block: var(--space-12);">
+      <div class="container">
+        <p class="overline" style="text-align:center; margin-bottom: var(--space-6);">We work with people in</p>
+        <div class="logo-bar" role="list">
+          <div class="logo-bar__placeholder" role="listitem">Education</div>
+          <div class="logo-bar__placeholder" role="listitem">Logistics</div>
+          <div class="logo-bar__placeholder" role="listitem">Public Sector</div>
+          <div class="logo-bar__placeholder" role="listitem">Startups</div>
+          <div class="logo-bar__placeholder" role="listitem">Scale-ups</div>
+          <div class="logo-bar__placeholder" role="listitem">SME Leaders</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         HOW IT WORKS
+         ============================================================ -->
+    <section class="section section--dark" aria-labelledby="process-heading">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-16);" class="process-grid">
+
+          <div class="section-header reveal">
+            <p class="overline">How We Work</p>
+            <h2 id="process-heading" style="margin-block: var(--space-4) var(--space-6);">From first conversation<br>to <span style="color: var(--color-red);">real change</span></h2>
+            <p class="lead">We follow a four-phase approach that puts experience before theory and makes sure every engagement produces something you can actually use.</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-10);">
+
+            <div class="process-step reveal">
+              <div class="process-step__number" aria-hidden="true">01</div>
+              <div class="process-step__content">
+                <h3 class="process-step__title">Discover</h3>
+                <p class="process-step__desc">We dig into your organisation, your people, and your real bottlenecks. We ask the questions that are too close to the inside to ask yourself.</p>
+              </div>
+            </div>
+
+            <div class="process-step reveal">
+              <div class="process-step__number" aria-hidden="true">02</div>
+              <div class="process-step__content">
+                <h3 class="process-step__title">Design</h3>
+                <p class="process-step__desc">We build something specific for you. A custom game, a consulting framework, or a training arc. Nothing generic comes off our shelf.</p>
+              </div>
+            </div>
+
+            <div class="process-step reveal">
+              <div class="process-step__number" aria-hidden="true">03</div>
+              <div class="process-step__content">
+                <h3 class="process-step__title">Simulate</h3>
+                <p class="process-step__desc">Your team plays, experiments, and makes decisions. All in a safe space where failure is information, not consequence.</p>
+              </div>
+            </div>
+
+            <div class="process-step reveal">
+              <div class="process-step__number" aria-hidden="true">04</div>
+              <div class="process-step__content">
+                <h3 class="process-step__title">Apply</h3>
+                <p class="process-step__desc">The insights move into real work. We help you embed what you learned and track whether it actually sticks.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FEATURED DEMO
+         ============================================================ -->
+    <section class="section section--surface" aria-labelledby="demo-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="overline">Live Demo</p>
+          <h2 id="demo-heading" style="margin-block: var(--space-4);">See it in <span style="color: var(--color-red);">action</span></h2>
+        </div>
+
+        <div style="
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
+          border-radius: var(--radius-xl);
+          padding: var(--space-12) var(--space-8);
+          position: relative;
+          overflow: hidden;
+        " class="reveal">
+          <div aria-hidden="true" style="
+            position: absolute;
+            top: 0; right: 0;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(255,214,10,0.06), transparent 70%);
+            pointer-events: none;
+          "></div>
+
+          <div style="max-width: 640px;">
+            <div style="display: flex; gap: var(--space-2); margin-bottom: var(--space-6);">
+              <span class="badge badge--yellow">Simulation</span>
+              <span class="badge badge--grey">Supply Chain</span>
+            </div>
+
+            <h3 style="
+              font-family: var(--font-heading);
+              font-size: var(--text-3xl);
+              font-weight: var(--weight-bold);
+              color: var(--color-white);
+              margin-bottom: var(--space-4);
+              line-height: var(--leading-snug);
+            ">
+              Value Chain Hackers: A Live Supply Chain Simulation
+            </h3>
+
+            <p style="color: var(--color-grey-400); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+              Value Chain Hackers is a digital simulation where teams experience the ripple effects of supply chain decisions in real time. It is built on the principles of the Beer Game and game theory. You can explore the live demonstrator right now and see exactly what simulation-based learning feels like in practice.
+            </p>
+
+            <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+              <a href="https://demonstrator.valuechainhackers.xyz" class="btn btn--yellow btn--lg" target="_blank" rel="noopener noreferrer">Try the Live Demo</a>
+              <a href="./simulations.html" class="btn btn--ghost">Learn About Simulations</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         TESTIMONIALS
+         ============================================================ -->
+    <section class="section section--dark" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <p class="overline">What Participants Say</p>
+          <h2 id="testimonials-heading" style="margin-block: var(--space-4);">Words from people<br><span style="color: var(--color-red);">who played the game</span></h2>
+        </div>
+
+        <div class="grid-3 stagger">
+
+          <blockquote class="testimonial reveal">
+            <p class="testimonial__text">
+              "Within one session, my students understood supply chain dynamics better than after six weeks of lectures. This is what learning should look like."
+            </p>
+            <footer class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true"></div>
+              <div>
+                <div class="testimonial__name">Dr. Sarah van den Berg</div>
+                <div class="testimonial__role">Programme Director, Hogeschool Rotterdam</div>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial reveal">
+            <p class="testimonial__text">
+              "The agile games created the buy-in we could never get from a training deck. People were laughing and learning at the same time. That is rare."
+            </p>
+            <footer class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true"></div>
+              <div>
+                <div class="testimonial__name">Mark Hendriks</div>
+                <div class="testimonial__role">Head of Learning and Development, Saxion University of Applied Sciences</div>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial reveal">
+            <p class="testimonial__text">
+              "Christiaan has a rare gift for turning complexity into something playable. Our department is still running the frameworks we built together."
+            </p>
+            <footer class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true"></div>
+              <div>
+                <div class="testimonial__name">Prof. Elena Kovacs</div>
+                <div class="testimonial__role">Department Chair, Erasmus University Rotterdam</div>
+              </div>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CTA BANNER
+         ============================================================ -->
+    <section class="section section--surface" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <p class="overline" style="color: rgba(255,255,255,0.7); margin-bottom: var(--space-4);">Ready to start?</p>
+          <h2 id="cta-heading" class="cta-banner__title">
+            Don't commit<br>until you've<br>simulated.
+          </h2>
+          <p class="cta-banner__text">
+            Book a free 30-minute discovery call. We will map your challenge together and show you what a practice run looks like in your specific context.
+          </p>
+          <div class="cta-banner__actions">
+            <a href="./contact.html" class="btn btn--yellow btn--lg" data-booking-trigger="true">
+              Book a Discovery Call
+            </a>
+            <a href="./services.html" class="btn btn--secondary btn--lg" style="border-color: rgba(255,255,255,0.4);">
+              Explore Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         BLOG / INSIGHTS TEASER
+         ============================================================ -->
+    <section class="section section--dark" aria-labelledby="blog-heading">
+      <div class="container">
+        <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap: var(--space-4);">
+          <div class="reveal">
+            <p class="overline">From the Blog</p>
+            <h2 id="blog-heading" style="margin-top: var(--space-4);">Insights &amp;<br><span style="color: var(--color-red);">perspectives</span></h2>
+          </div>
+          <a href="./blog/index.html" class="btn btn--ghost reveal">View All Insights</a>
+        </div>
+
+        <div class="grid-3 stagger">
+
+          <article class="card reveal" style="display:flex; flex-direction:column; gap: var(--space-4);">
+            <div>
+              <span class="badge badge--red" style="margin-bottom: var(--space-3);">Agile</span>
+              <h3 style="font-size: var(--text-lg); font-weight: var(--weight-bold); color: var(--color-white); line-height: var(--leading-snug);">
+                Why Your Scrum Adoption Fails Without a Game First
+              </h3>
+            </div>
+            <p style="font-size: var(--text-sm); color: var(--color-grey-400);">Buy-in is not a checkbox. It is something people feel after experiencing agile in a game. Here is why that matters and what changes when you start with play.</p>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:auto;">
+              <span style="font-size: var(--text-xs); color: var(--color-grey-600);">5 min read</span>
+              <a href="./blog/index.html" class="link" style="font-size: var(--text-sm);">Read</a>
+            </div>
+          </article>
+
+          <article class="card reveal" style="display:flex; flex-direction:column; gap: var(--space-4);">
+            <div>
+              <span class="badge badge--yellow" style="margin-bottom: var(--space-3);">Simulation</span>
+              <h3 style="font-size: var(--text-lg); font-weight: var(--weight-bold); color: var(--color-white); line-height: var(--leading-snug);">
+                The Beer Game: How One Classic Reveals the Bullwhip Effect
+              </h3>
+            </div>
+            <p style="font-size: var(--text-sm); color: var(--color-grey-400);">A fifty-year-old game still teaches one of the most important lessons in supply chain management. Here is what it reveals and how we build on it.</p>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:auto;">
+              <span style="font-size: var(--text-xs); color: var(--color-grey-600);">7 min read</span>
+              <a href="./blog/index.html" class="link" style="font-size: var(--text-sm);">Read</a>
+            </div>
+          </article>
+
+          <article class="card reveal" style="display:flex; flex-direction:column; gap: var(--space-4);">
+            <div>
+              <span class="badge badge--grey" style="margin-bottom: var(--space-3);">Innovation</span>
+              <h3 style="font-size: var(--text-lg); font-weight: var(--weight-bold); color: var(--color-white); line-height: var(--leading-snug);">
+                The Conscious Competence Model: A Framework for Real Learning
+              </h3>
+            </div>
+            <p style="font-size: var(--text-sm); color: var(--color-grey-400);">Most training stops at unconscious incompetence. We explain the four stages of learning and why getting people to conscious competence requires more than a slide deck.</p>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:auto;">
+              <span style="font-size: var(--text-xs); color: var(--color-grey-600);">6 min read</span>
+              <a href="./blog/index.html" class="link" style="font-size: var(--text-sm);">Read</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="./index.html" class="footer-brand__logo" aria-label="SocialChicken Home">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="36" height="36" rx="8" fill="#D72638"/>
+              <path d="M9 18C9 13.029 13.029 9 18 9C22.971 9 27 13.029 27 18" stroke="#FFD60A" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 21C13 17.686 15.686 15 19 15C22.314 15 25 17.686 25 21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="18" cy="24.5" r="2.5" fill="white"/>
+            </svg>
+            <span class="footer-brand__logo-text">Social<span class="accent">Chicken</span></span>
+          </a>
+          <p class="footer-brand__tagline">
+            Agile training, innovation consulting, and serious games by Christiaan Verhoef.
+          </p>
+          <nav class="footer-social" aria-label="Social media links">
+            <a href="#" class="footer-social__link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="footer-col__heading">Services</h3>
+          <ul class="footer-col__links">
+            <li><a href="./training.html">Agile Working Training</a></li>
+            <li><a href="./services.html#innovation">Innovation Consulting</a></li>
+            <li><a href="./simulations.html">Simulations &amp; Games</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h3 class="footer-col__heading">Resources</h3>
+          <ul class="footer-col__links">
+            <li><a href="./resources.html">Templates &amp; Tools</a></li>
+            <li><a href="./case-studies.html">Case Studies</a></li>
+            <li><a href="./blog/index.html">Insights</a></li>
+            <li><a href="./about.html">About Christiaan</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="footer-col__heading">Get in Touch</h3>
+          <ul class="footer-col__links">
+            <li><a href="./contact.html" data-booking-trigger="true">Book a Discovery Call</a></li>
+            <li><a href="mailto:chris@socialchicken.net">chris@socialchicken.net</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; <span id="copyright-year">2026</span> SocialChicken. All rights reserved.
+        </p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot widget mount point -->
+  <div id="chatbot-widget-container" aria-label="Chat support" data-integration="chatbot"></div>
+
+</div><!-- /#main-content -->
+
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script src="./js/splash.js" defer></script>
+<script src="./js/nav.js" defer></script>
+<script src="./js/scroll-animations.js" defer></script>
+<script src="./js/calendar-placeholder.js" defer></script>
+<script src="./js/chatbot-placeholder.js" defer></script>
+</body>
+</html>
