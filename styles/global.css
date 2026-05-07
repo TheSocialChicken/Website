@@ -63,7 +63,7 @@ p {
 .lead {
   font-size: var(--text-xl);
   line-height: var(--leading-relaxed);
-  color: var(--color-grey-400);
+  color: var(--text-muted);
 }
 
 .overline {
@@ -101,7 +101,19 @@ p {
 }
 
 .section--dark {
-  background-color: var(--bg-primary);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.section--dark p {
+  color: var(--color-grey-400);
+}
+
+.section--dark h1,
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 {
+  color: var(--color-white);
 }
 
 .section--surface {
@@ -125,6 +137,7 @@ p {
 
 .section--accent {
   background-color: var(--color-red);
+  color: var(--color-white);
 }
 
 /* ---- BUTTONS ---- */
@@ -164,15 +177,26 @@ p {
 
 .btn--secondary {
   background-color: transparent;
-  color: var(--color-white);
-  border-color: rgba(255,255,255,0.3);
+  color: var(--color-black);
+  border-color: rgba(10, 22, 40, 0.3);
 }
 
 .btn--secondary:hover,
 .btn--secondary:focus-visible {
-  border-color: var(--color-white);
-  background-color: rgba(255,255,255,0.05);
+  border-color: var(--color-black);
+  background-color: rgba(10, 22, 40, 0.05);
   transform: translateY(-2px);
+}
+
+.section--dark .btn--secondary {
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.section--dark .btn--secondary:hover,
+.section--dark .btn--secondary:focus-visible {
+  border-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .btn--yellow {
@@ -226,14 +250,14 @@ p {
 }
 
 .badge--red {
-  background-color: rgba(255, 106, 19, 0.15);
-  color: var(--color-red-light);
-  border: 1px solid rgba(255, 106, 19, 0.3);
+  background-color: rgba(255, 106, 19, 0.12);
+  color: var(--color-red-dark);
+  border: 1px solid rgba(255, 106, 19, 0.25);
 }
 
 .badge--yellow {
   background-color: rgba(255, 214, 10, 0.15);
-  color: var(--color-yellow);
+  color: var(--color-yellow-dark);
   border: 1px solid rgba(255, 214, 10, 0.3);
 }
 

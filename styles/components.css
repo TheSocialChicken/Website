@@ -88,14 +88,14 @@
   font-family: var(--font-heading);
   font-size: var(--text-2xl);
   font-weight: var(--weight-bold);
-  color: var(--color-white);
+  color: var(--text-primary);
   letter-spacing: var(--tracking-tight);
   line-height: var(--leading-snug);
 }
 
 .service-card__desc {
   font-size: var(--text-base);
-  color: var(--color-grey-400);
+  color: var(--text-secondary);
   line-height: var(--leading-relaxed);
   flex: 1;
 }
@@ -170,7 +170,7 @@
 .testimonial__text {
   font-size: var(--text-lg);
   line-height: var(--leading-relaxed);
-  color: var(--color-grey-200);
+  color: var(--text-secondary);
   font-style: italic;
   margin-bottom: var(--space-6);
   padding-top: var(--space-8);
@@ -194,7 +194,7 @@
 
 .testimonial__name {
   font-weight: var(--weight-semibold);
-  color: var(--color-white);
+  color: var(--text-primary);
   font-size: var(--text-sm);
 }
 
@@ -251,13 +251,13 @@
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: var(--weight-bold);
-  color: var(--color-white);
+  color: var(--text-primary);
   margin-bottom: var(--space-2);
 }
 
 .process-step__desc {
   font-size: var(--text-base);
-  color: var(--color-grey-400);
+  color: var(--text-secondary);
   line-height: var(--leading-relaxed);
 }
 
@@ -396,7 +396,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: var(--weight-bold);
-  color: var(--color-white);
+  color: var(--text-primary);
 }
 
 .case-card__result {
@@ -445,7 +445,7 @@
   padding: var(--space-4);
   font-family: var(--font-body);
   font-size: var(--text-base);
-  color: var(--color-white);
+  color: var(--text-primary);
   transition: border-color var(--transition-base), box-shadow var(--transition-base);
   width: 100%;
 }
@@ -479,5 +479,30 @@
 
 .form-select option {
   background: var(--color-black-soft);
+  color: var(--color-white);
+}
+
+/* ---- DARK SECTION OVERRIDES ---- */
+
+.section--dark .service-card__title,
+.section--dark .process-step__title,
+.section--dark .testimonial__name,
+.section--dark .case-card__title {
+  color: var(--color-white);
+}
+
+.section--dark .service-card__desc,
+.section--dark .process-step__desc,
+.section--dark .testimonial__text,
+.section--dark .case-card__result,
+.section--dark .stat-card__label,
+.section--dark .form-label {
+  color: var(--color-grey-400);
+}
+
+.section--dark .form-input,
+.section--dark .form-select,
+.section--dark .form-textarea {
+  background: var(--bg-surface);
   color: var(--color-white);
 }

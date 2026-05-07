@@ -11,6 +11,10 @@
   height: var(--nav-height);
   display: flex;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--border-color);
   transition: background-color var(--transition-slow),
               height var(--transition-base),
               box-shadow var(--transition-base);
@@ -18,9 +22,7 @@
 
 #site-nav.scrolled {
   height: var(--nav-height-scrolled);
-  background-color: rgba(13, 13, 13, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.97);
   box-shadow: 0 1px 0 var(--border-color), var(--shadow-md);
 }
 
@@ -61,7 +63,7 @@
   font-size: var(--text-2xl);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-white);
+  color: var(--color-black);
   line-height: 1;
 }
 
@@ -96,15 +98,15 @@
   font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: var(--color-grey-400);
+  color: var(--text-muted);
   border-radius: var(--radius-md);
   transition: color var(--transition-base), background-color var(--transition-base);
 }
 
 .nav-menu__link:hover,
 .nav-menu__link.active {
-  color: var(--color-white);
-  background-color: rgba(255,255,255,0.06);
+  color: var(--color-black);
+  background-color: rgba(10, 22, 40, 0.05);
 }
 
 .nav-menu__link.active::after {
@@ -162,7 +164,7 @@
 .nav-hamburger__line {
   display: block;
   height: 2px;
-  background: var(--color-white);
+  background: var(--color-black);
   border-radius: var(--radius-full);
   transition: transform var(--transition-base), opacity var(--transition-base), width var(--transition-base);
   transform-origin: center;
@@ -262,14 +264,14 @@
 }
 
 .lang-switcher__link:hover {
-  color: var(--color-white);
-  background-color: rgba(255,255,255,0.06);
+  color: var(--color-black);
+  background-color: rgba(10, 22, 40, 0.05);
 }
 
 .lang-switcher__link.active,
 .lang-switcher__link[aria-current="true"] {
-  color: var(--color-white);
-  background-color: rgba(255,255,255,0.08);
+  color: var(--color-black);
+  background-color: rgba(10, 22, 40, 0.07);
 }
 
 /* Mobile lang switcher */

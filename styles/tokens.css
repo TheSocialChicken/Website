@@ -22,22 +22,22 @@
   --color-white:       #F9F9F9;
 
   /* Semantic aliases */
-  --bg-primary:        var(--color-black);
-  --bg-secondary:      var(--color-black-soft);
-  --bg-surface:        var(--color-surface);
-  --bg-light:          var(--color-grey-100);
-  --bg-white:          var(--color-white);
+  --bg-primary:        #FFFFFF;
+  --bg-secondary:      #F4F7FA;
+  --bg-surface:        #EDF2F7;
+  --bg-light:          #F4F7FA;
+  --bg-white:          #FFFFFF;
 
-  --text-primary:      var(--color-white);
-  --text-secondary:    var(--color-grey-400);
-  --text-dark:         var(--color-black);
-  --text-muted:        var(--color-grey-600);
+  --text-primary:      #0A1628;
+  --text-secondary:    #2D4A6B;
+  --text-dark:         #0A1628;
+  --text-muted:        #6B7280;
 
   --accent-primary:    var(--color-red);
   --accent-secondary:  var(--color-yellow);
   --accent-hover:      var(--color-red-dark);
 
-  --border-color:      rgba(255, 255, 255, 0.08);
+  --border-color:      rgba(10, 22, 40, 0.12);
   --border-light:      var(--color-grey-200);
 
   /* --- TYPOGRAPHY --- */
