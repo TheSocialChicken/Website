@@ -117,7 +117,7 @@ p {
 }
 
 .section--surface {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-surface);
 }
 
 .section--light {

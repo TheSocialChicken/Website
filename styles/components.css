@@ -503,6 +503,16 @@
 .section--dark .form-input,
 .section--dark .form-select,
 .section--dark .form-textarea {
-  background: var(--bg-surface);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
   color: var(--color-white);
+}
+
+/* Dark section: give cards a dark background so white text is readable */
+.section--dark .card,
+.section--dark .service-card,
+.section--dark .case-card,
+.section--dark .testimonial {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
 }
