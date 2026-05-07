@@ -150,7 +150,7 @@
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = `rgba(215, 38, 56, ${lineAlpha})`;
+            ctx.strokeStyle = `rgba(255, 106, 19, ${lineAlpha})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }

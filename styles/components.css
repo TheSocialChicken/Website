@@ -33,7 +33,7 @@
 }
 
 .service-card:hover {
-  border-color: rgba(215, 38, 56, 0.3);
+  border-color: rgba(255, 106, 19, 0.3);
   transform: translateY(-6px);
   box-shadow: var(--shadow-xl);
 }
@@ -57,7 +57,7 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
-  background: rgba(215, 38, 56, 0.12);
+  background: rgba(255, 106, 19, 0.12);
   color: var(--color-red);
   flex-shrink: 0;
 }
@@ -239,7 +239,7 @@
   font-family: var(--font-display);
   font-size: var(--text-2xl);
   color: var(--color-red);
-  background: rgba(215, 38, 56, 0.08);
+  background: rgba(255, 106, 19, 0.08);
 }
 
 .process-step__content {
@@ -460,7 +460,7 @@
 .form-textarea:focus {
   outline: none;
   border-color: var(--color-red);
-  box-shadow: 0 0 0 3px rgba(215, 38, 56, 0.15);
+  box-shadow: 0 0 0 3px rgba(255, 106, 19, 0.15);
 }
 
 .form-select {

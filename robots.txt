@@ -14,4 +14,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://thesocialchicken.github.io/Website/sitemap.xml
+Sitemap: https://socialchicken.net/sitemap.xml

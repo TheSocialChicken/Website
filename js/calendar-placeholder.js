@@ -62,7 +62,7 @@ window.BookingConfig = {
 
     // ---- CAL.COM POPUP ----
     // if (cfg.provider === 'calcom' && window.Cal) {
-    //   window.Cal('ui', { styles: { branding: { brandColor: '#D72638' } } });
+    //   window.Cal('ui', { styles: { branding: { brandColor: '#FF6A13' } } });
     //   window.Cal('openModal', { calLink: cfg.bookingUrl });
     // }
 
