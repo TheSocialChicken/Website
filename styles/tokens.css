@@ -6,38 +6,40 @@
 :root {
 
   /* --- COLOUR PALETTE --- */
-  --color-black:       #0A1628;
-  --color-black-soft:  #0F2040;
-  --color-surface:     #162B4A;
-  --color-red:         #FF6A13;
+  /* Warm palette: replaces cold navy with warm dark, adds warmth to all tones */
+  --color-black:       #1C1208;   /* warm dark, used for dark sections + headings */
+  --color-black-soft:  #2E2012;
+  --color-surface:     #3C2E18;
+  --color-red:         #FF6A13;   /* Dutch orange: unchanged so logo SVGs match */
   --color-red-dark:    #D45A0A;
   --color-red-light:   #FF8A45;
   --color-yellow:      #FFD60A;
   --color-yellow-dark: #C9A800;
-  --color-grey-800:    #374151;
-  --color-grey-600:    #6B7280;
-  --color-grey-400:    #9CA3AF;
-  --color-grey-200:    #E5E7EB;
-  --color-grey-100:    #F3F4F6;
-  --color-white:       #F9F9F9;
+  --color-grey-800:    #3C2E20;
+  --color-grey-600:    #786050;
+  --color-grey-500:    #8A7A68;   /* added: used in nav lang switcher */
+  --color-grey-400:    #9A8A78;   /* warm grey with better contrast than cold #9CA3AF */
+  --color-grey-200:    #E8DDD0;
+  --color-grey-100:    #F5EEE6;
+  --color-white:       #FDF9F3;   /* warm off-white */
 
   /* Semantic aliases */
-  --bg-primary:        #FFFFFF;
-  --bg-secondary:      #F4F7FA;
-  --bg-surface:        #EDF2F7;
-  --bg-light:          #F4F7FA;
-  --bg-white:          #FFFFFF;
+  --bg-primary:        #FDFAF5;   /* barely-warm off-white page background */
+  --bg-secondary:      #F5EEE8;   /* warm cream: card backgrounds */
+  --bg-surface:        #EBE2D4;   /* warm tan: surface section backgrounds */
+  --bg-light:          #F5EEE8;
+  --bg-white:          #FDFAF5;
 
-  --text-primary:      #0A1628;
-  --text-secondary:    #2D4A6B;
-  --text-dark:         #0A1628;
-  --text-muted:        #6B7280;
+  --text-primary:      #1C1208;   /* warm dark, replaces cold navy */
+  --text-secondary:    #4A3828;   /* warm medium */
+  --text-dark:         #1C1208;
+  --text-muted:        #786050;   /* warm grey-brown */
 
   --accent-primary:    var(--color-red);
   --accent-secondary:  var(--color-yellow);
   --accent-hover:      var(--color-red-dark);
 
-  --border-color:      rgba(10, 22, 40, 0.12);
+  --border-color:      rgba(28, 18, 8, 0.12);   /* warm dark transparent */
   --border-light:      var(--color-grey-200);
 
   /* --- TYPOGRAPHY --- */
@@ -109,11 +111,11 @@
   --border-width-2: 2px;
 
   /* --- SHADOWS --- */
-  --shadow-sm:  0 1px 3px rgba(0,0,0,0.4);
-  --shadow-md:  0 4px 16px rgba(0,0,0,0.5);
-  --shadow-lg:  0 8px 32px rgba(0,0,0,0.6);
-  --shadow-xl:  0 16px 64px rgba(0,0,0,0.7);
-  --shadow-red: 0 4px 24px rgba(255, 106, 19, 0.35);
+  --shadow-sm:  0 1px 4px rgba(28, 18, 8, 0.08);
+  --shadow-md:  0 4px 16px rgba(28, 18, 8, 0.10);
+  --shadow-lg:  0 8px 32px rgba(28, 18, 8, 0.12);
+  --shadow-xl:  0 16px 48px rgba(28, 18, 8, 0.15);
+  --shadow-red: 0 4px 24px rgba(255, 106, 19, 0.30);
   --shadow-yellow: 0 4px 24px rgba(255, 214, 10, 0.25);
 
   /* --- TRANSITIONS --- */
